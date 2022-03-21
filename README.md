@@ -18,6 +18,6 @@ python3 words_game.py
 Предварительно заполните ENV переменные, указанные выше, в Dockerfile.
 
 ```
-docker build wordsgame ./
+docker build -t wordsgame ./
 docker run -d wordsgame
 ```

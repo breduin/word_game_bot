@@ -17,7 +17,7 @@ API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 
-WORDS_FILENAME = 'singular.txt'
+WORDS_FILENAME = 'children.txt'
 MAX_NUM_WORDS_WITH_CHAR = 3
 
 class WordIssue:
@@ -51,7 +51,7 @@ class WordIssue:
 with open(WORDS_FILENAME, 'r', encoding='utf-8') as words_file:
     words = words_file.read().split('\n')
 
-
+words = [word.strip().lower() for word in words]
 words_queue = WordIssue(words)
 
 
