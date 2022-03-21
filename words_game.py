@@ -38,7 +38,7 @@ class WordIssue:
     def pick(self, last_char):
         last_char = last_char.lower()
         if last_char not in self._words_by_first_char:
-            raise exceptions.NoChar()
+            raise exceptions.NoChar('Нет слов на такую букву!')
         try:
             return self._words_by_first_char[last_char].pop()
         except IndexError:

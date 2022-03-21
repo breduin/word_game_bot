@@ -1,11 +1,7 @@
 """Кастомные исключения, генерируемые приложением"""
+from aiogram.utils.exceptions import BadRequest
 
 
-class NotCorrectMessage(Exception):
-    """Некорректное сообщение в бот, которое не удалось распарсить"""
-    pass
-
-
-class NoChar(Exception):
+class NoChar(BadRequest):
     """Нет слов, начинающихся с данной буквы."""
     pass
